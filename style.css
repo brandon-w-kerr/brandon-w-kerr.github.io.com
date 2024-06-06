@@ -1,0 +1,321 @@
+
+.navbar ul
+{
+    list-style-type: none;
+    background-color: #08111a;
+    padding: 0px;
+    margin: 0px;
+    overflow: hidden;
+    justify-content: space-between;
+    display: flex;
+    font-family: Spectral;
+    
+}
+
+img
+{
+    filter: brightness(50%);
+}
+
+.navbar a
+{
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    display: block;
+    text-align: center;
+    justify-content: space-around;
+    font-size: x-large;
+}
+
+.navbar a:hover
+{
+    background-color: azure;
+    color: rgb(49, 105, 146);
+}
+
+.navbar li
+{
+    float: left;
+    justify-content: space-around;
+}
+
+.rectangleforsummary {
+    height: 150px;
+    width: 1100px;
+    padding: 10px;
+    left: 10%;
+    background-color: rgb(226, 248, 255);
+}
+
+/*"body" controls the nav bar and the image's size*/
+body
+{
+   margin:0px; 
+}
+
+
+
+/*the beach image is supposed to have a width of 800 and a height of 250. display block*/
+
+.headeronecenter
+{
+    text-align: center;
+    color: azure;
+    font-size: 35px;
+}
+.titleontheocean
+{
+    position: relative;
+    width: 1500px;
+    height: 200px;
+    background-image: url();
+    background-size: cover;
+    background-size: 100% 100%;
+    color: white;
+    text-align: center;
+    line-height: 300px;
+}
+.top-right
+{
+    position: absolute;
+    bottom: 8px;
+    right: 16px;
+    top: 0%;
+}
+
+.circle
+{
+    height: 70px;
+    width: 70px;
+    background-color: azure;
+    border-radius: 75%;
+}
+
+.bottom-right
+{
+    position: absolute;
+    bottom: 8px;
+    top: 20%;
+    right: 40%;
+    padding: 10px;
+    font-size: 100px;
+    color: white;
+    font-weight: bold;
+}
+
+/* test for animation */
+.SlideToLeft
+{
+    animation-name: SlideToLeft;
+    animation-duration: 0.80s;
+    animation-timing-function: ease-in;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: none;
+}
+
+.FadeIn
+{
+    animation: FadeIn 1s ease-in 0s 1 normal none;
+}
+
+.FadeInSlideToLeft
+{
+    animation: FadeInSlideToLeft 1s ease-in 0s 1 normal none;
+}
+
+.paragraphsummary
+{
+    font-family: Montserrat;
+    font-size: 25px;
+    text-align: center;
+    color: white;
+    padding: 3%;
+}
+
+
+
+.text-mont {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+ul 
+{
+    list-style-type: none;
+}
+
+
+/* this is the animation properties, it can be edited here */
+@keyframes SlideToLeft
+{
+    from
+    {
+        transform: translateX(300px);
+    }
+
+    to
+    {
+        transform: translateX(0);
+    }
+}
+
+@keyframes FadeIn
+{
+    from
+    {
+        opacity: 0%;
+    }
+
+    to
+    {
+        opacity: 100%;
+    }
+}
+
+@keyframes FadeInSlideToLeft
+{
+    from
+    {
+        opacity: 0%;
+        transform: translateX(300px);
+    }
+
+    to
+    {
+        opacity: 100%;
+        transform: translateX(0);
+    }
+}
+
+
+@font-face {
+    font-family: Spectral;
+    src: url(https://fonts.google.com/specimen/Spectral);
+}
+
+@font-face {
+    font-family: Montserrat;
+    src: url(https://fonts.google.com/specimen/Montserrat);
+}
+
+
+  .spectral-regular {
+    font-family: "Spectral", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+
+  .spectral-bold {
+    font-family: "Spectral", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .spectral-extrabold {
+    font-family: "Spectral", serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .tiro-kannada-regular {
+    font-family: "Tiro Kannada", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .tiro-kannada-regular-italic {
+    font-family: "Tiro Kannada", serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  /* this is the image with the moon over the water */
+.img_moonwater 
+{
+    float: right;
+    width: 40%;
+    filter: brightness(75%);
+}
+
+.img_bannerwater 
+{
+    width: 100%;
+    filter: brightness(75%);
+}
+
+
+
+.image-gallery
+{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.image-gallery > li 
+{
+    height: 300px;
+    position: relative;
+    cursor: pointer;
+    flex-grow: 1;
+}
+
+.image-gallery li img 
+{
+    object-fit: cover;
+    vertical-align: middle;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+}
+
+.overlay 
+{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(57, 57, 57, 0.502);
+    top: 0;
+    left: 0;
+    transform: scale(0);
+    transition: all 0.2s 0.1 ease-in-out;
+    color: #fff;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-gallery li:hover .overlay
+{
+    transform: scale(1);
+}
+
+.oceantext 
+{
+    font-size: 30px;
+    font-weight: bold;
+    padding: 0px;
+    top: 0%;
+}
+
+.justsomeheadertext 
+{
+    color: white;
+    font-family: Spectral;
+    text-align: center;
+    font-size: 45px;
+    font-weight: bold;
+}
+
+.imagecenterchacron 
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+    height: 600px;
+}
